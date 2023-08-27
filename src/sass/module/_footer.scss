@@ -1,0 +1,97 @@
+@use "global" as *;
+
+.footer {
+  background-color: $deepNavy;
+  padding: rem(50) rem(50) rem(30);
+  width: 100%;
+  @include mq(md) {
+    padding-left: 11.8%;
+    padding-right: 9.72%;
+    padding-bottom: rem(54);
+  }
+}
+
+.footer__inner {
+  width: 100%;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "whiteSpace whiteSpace navi"
+      "logo icons navi"
+      "copyRight space navi";
+  }
+}
+
+.footer__nav {
+  width: 100%;
+  @include mq(md) {
+    grid-area: navi;
+  }
+}
+
+.footer__items {
+  width: 100%;
+}
+
+.footer__item {
+  width: 100%;
+}
+.footer__item a {
+  display: block;
+  width: 100%;
+  color: $white;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  padding: rem(12) 0;
+  @include mq(md) {
+    padding: rem(10) 0;
+  }
+}
+
+.footer__logo {
+  width: rem(114);
+  margin-top: rem(50);
+  @include mq(md) {
+    grid-area: logo;
+    width: rem(258);
+    margin-top: 0;
+  }
+}
+
+.footer__icons {
+  color: $white;
+  font-size: rem(22);
+  margin-top: rem(50);
+  @include mq(md) {
+    grid-area: icons;
+    margin-top: 0;
+    margin-left: rem(48);
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer__social-icon + .footer__social-icon {
+  margin-left: rem(16);
+}
+
+.footer__copyright {
+  display: inline-block;
+  color: $white;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: calc(14 / 12);
+  margin-top: rem(50);
+  @include mq(md) {
+    grid-area: copyRight;
+    display: block;
+    margin-top: rem(20);
+  }
+}

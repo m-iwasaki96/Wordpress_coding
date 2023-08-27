@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.card {
+  width: 100%;
+}
+
+.card__img {
+  position: relative;
+  width: 100%;
+}
+
+.card__img::before {
+  content: "";
+  display: block;
+  padding-top: 50.7462%;
+  @include mq(md) {
+    padding-top: 47.8873%;
+  }
+}
+
+.card__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__title {
+  padding: rem(50) rem(30);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card__title-en {
+  color: $white;
+  font-family: $second-font-family;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  text-transform: capitalize;
+}
+
+.card__title-ja {
+  color: $white;
+  font-family: $base-font-family;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  line-height: calc(38 / 26);
+  margin-top: rem(10);
+}
+
+.card__contents {
+  padding-top: rem(20);
+  @include mq(md) {
+    padding-right: rem(20);
+  }
+}
+
+.card__text {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(32 / 14);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(38 / 16);
+  }
+}
+
+.card__btn {
+  text-align: right;
+  margin-top: rem(20);
+}
+
+.card__btn a {
+  position: relative;
+  display: inline-block;
+  color: $navy;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: 1;
+  text-transform: uppercase;
+  border: 1px solid $navy;
+  border-radius: 4px;
+  padding: rem(12) rem(34) rem(12) rem(24);
+  @include mq(md) {
+    padding: rem(14) rem(34) rem(14) rem(24);
+  }
+}
+
+.card__btn a::after {
+  position: absolute;
+  top: 17px;
+  display: inline-block;
+  content: "";
+  transform: rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-top: 2px solid $navy2;
+  border-right: 2px solid $navy2;
+  transition: margin-left .3s;
+}
+
+.card__btn a:hover:after {
+  margin-left: 15px;
+}

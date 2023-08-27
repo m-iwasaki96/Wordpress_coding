@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.post {
+  padding-bottom: rem(72);
+}
+
+.post__header {
+  padding-bottom: rem(35);
+  @include mq(md) {
+    padding-bottom: rem(40);
+  }
+}

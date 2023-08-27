@@ -1,0 +1,165 @@
+@use "global" as *;
+
+.list {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+
+.list__aside {
+  padding-right: rem(20);
+  padding-left: rem(20);
+  @include mq(md) {
+    padding: 0;
+    width: 24%;
+  }
+}
+
+.list__categories {
+  padding-left: rem(14);
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-bottom: 0;
+  }
+}
+
+.list__category-items {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(40);
+  row-gap: rem(15);
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.list__category-item {
+  position: relative;
+  display: block;
+  color: $gray2;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  font-weight: $medium;
+  line-height: calc(17 / 12);
+  cursor: pointer;
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: calc(20 / 14);
+  }
+}
+
+.list__category-item.is-active {
+  color: $navy2;
+}
+
+.list__category-item::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -14px;
+  width: rem(8);
+  height: rem(8);
+  background-color: $gray4;
+}
+
+.list__category-item.is-active::before {
+  background-color: $navy2;
+}
+
+.list__menu-items {
+  padding-left: rem(20);
+  padding-right: rem(20);
+  @include mq(md) {
+    width: 76%;
+    padding-left: rem(60);
+    padding-right: 0;
+    border-left: 1px solid $gray5;
+  }
+
+}
+
+.list__menu-item:first-child {
+  border-top: 1px solid $gray5;
+  @include mq(md) {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.list__menu-item {
+  display: block;
+  border-bottom: 1px solid $gray5;
+  padding: rem(20) 0;
+  @include mq(md) {
+    padding: rem(30) 0;
+  }
+}
+
+.list__item-date {
+  color: $gray2;
+  font-family: $base-font-family;
+  font-size: rem(10);
+  font-weight: $bold;
+  line-height: calc(14 / 10);
+  @include mq(md) {
+    font-size: rem(12);
+    line-height: calc(17 / 12);
+  }
+
+}
+
+.list__label {
+  display: inline-block;
+  color: $gray;
+  font-family: $base-font-family;
+  font-size: rem(10);
+  font-weight: $medium;
+  line-height: calc(14 / 10);
+  padding: rem(5) rem(15);
+  background-color: #fff;
+  @include mq(md) {
+    font-size: rem(11);
+    line-height: calc(16 / 11);
+    padding: rem(4) rem(18);
+  }
+}
+
+// 下層ページ色反転用
+.list__label--reverse {
+  background-color: $gray4;
+}
+
+.list___text {
+  position: relative;
+  display: inline-block;
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(28 / 14);
+  margin-top: rem(20);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(23 / 16);
+    margin-top: rem(30);
+  }
+}
+
+.list___text::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $navy2;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.list__menu-item:hover .list___text::before {
+  transform: scale(1, 1);
+}

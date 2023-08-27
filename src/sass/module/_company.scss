@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.company {
+  background-color: $gray4;
+  padding-top: rem(60);
+  @include mq(md) {
+    padding-top: rem(70);
+  }
+}
+
+.company__profile {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}
+
+.company__list {
+  padding: rem(20) 0;
+  border-bottom: 1px solid $gray5;
+  @include mq(md) {
+    padding: rem(40) 0;
+    display: flex;
+  }
+}
+
+.company__label {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(20 / 14);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(23 / 16);
+    width: 15.4545%;
+  }
+}
+
+.company__content {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(20 / 14);
+  margin-top: rem(16);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(23 / 16);
+    margin-top: 0;
+    width: 84.5454%;
+  }
+}
+
+.company__detail + .company__detail {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}

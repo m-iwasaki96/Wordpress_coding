@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.philosophy__inner.inner {
+  background-color: linear-gradient(180deg, $gray4 0%, $gray4 89.6805%, transparent 89.6805%, transparent 100%);
+  @include mq(md) {
+    background-color: transparent;
+  }
+}
+
+.philosophy__container {
+  @include mq(md) {
+    display: flex;
+    background-color: $gray4;
+  }
+}
+
+.philosophy__text {
+  padding-top: rem(60);
+  @include mq(md) {
+    padding: rem(70) rem(30);
+    margin: initial;
+    width: 67.2727%;
+  }
+}
+
+.philosophy__message {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(32 / 14);
+  margin-top: rem(30);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(38 / 16);
+    margin-top: rem(60);
+  }
+}
+
+.philosophy__ceo-name {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(20 / 14);
+  text-align: right;
+  margin-top: rem(30);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(23 / 16);
+    margin-top: rem(40);
+  }
+}
+
+.philosophy__img {
+  left: 0;
+  bottom: -84px;
+  margin-top: rem(30);
+  @include mq(md) {
+    width: 32.7272%;
+    margin-top: 0;
+  }
+}
+
+.philosophy__img img {
+  aspect-ratio: 335 / 300;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 360 / 535;
+    height: 100%;
+  }
+}

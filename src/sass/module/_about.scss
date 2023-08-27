@@ -1,0 +1,119 @@
+@use "global" as *;
+
+.about__inner {
+  @include mq(md) {
+    display: flex;
+    gap: rem(60);
+  }
+}
+
+.about__img {
+  position: relative;
+  width: 100%;
+  @include mq(md) {
+    width: 50%;
+  }
+}
+.about__img::before {
+  content: "";
+  display: block;
+  padding-top: 87.1641%;
+  @include mq(md) {
+    padding-top: 87.2727%;
+  }
+}
+
+.about__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__contents {
+  padding-top: rem(30);
+  @include mq(md) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+  }
+}
+
+.about__title {
+  color: $black;
+  font-family: $second-font-family;
+  font-size: rem(14);
+  font-weight: $bold;
+  line-height: calc(21 / 14);
+  text-transform: capitalize;
+}
+
+.about__text {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  line-height: calc(32 / 14);
+  margin-top: rem(30);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(38 / 16);
+    margin-top: rem(40);
+  }
+}
+
+.about__link {
+  text-align: right;
+  margin-top: rem(40);
+}
+.about__link a {
+  position: relative;
+  display: inline-block;
+  color: $navy2;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(16 / 14);
+  padding-right: rem(20);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.about__link a::after {
+  position: absolute;
+  top: 4px;
+  display: inline-block;
+  content: "";
+  transform: rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-top: 2px solid $navy2;
+  border-right: 2px solid $navy2;
+  transition: margin-left .3s;
+}
+
+.about__link a:hover::after {
+  margin-left: 15px;
+}
+
+.about__link a::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $navy2;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.about__link a:hover:before {
+  transform: scale(1, 1);
+}

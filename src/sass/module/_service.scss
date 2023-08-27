@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.service__header {
+  text-align: left;
+  @include mq(md) {
+    text-align: right;
+  }
+}
+
+.service__title {
+  @include mq(md) {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.service__cards {
+  margin-top: rem(20);
+  @include mq(md) {
+    display: flex;
+    gap: rem(18);
+    margin-top: rem(40);
+  }
+}
+
+.service__card + .service__card {
+  margin-top: rem(50);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}

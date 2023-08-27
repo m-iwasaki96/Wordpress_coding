@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.error-page {
+  width: 100%;
+}
+
+.error-page__inner {
+  width: 100%;
+}
+
+.error-page__img {
+  position: relative;
+  width: inherit;
+  padding-right: 0;
+  padding-left: 2.6666%;
+  @include mq(md) {
+    padding-left: 11.8055%;
+    height: 600px;
+  }
+}
+
+.error-page__img img {
+  aspect-ratio: 365 / 243;
+  object-fit: cover;
+  width: 100%;
+  height: 243px;
+  @include mq(md) {
+    aspect-ratio: 1270 / 600;
+    height: 600px;
+  }
+}
+
+.error-page__container {
+  position: absolute;
+  top: rem(95);
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq(md) {
+    top: 28%;
+    left: 50.3472%;
+    transform: translateX(0);
+  }
+}
+
+.error-page__title {
+  color: $white;
+  font-family: $second-font-family;
+  font-size: rem(35);
+  font-weight: $bold;
+  line-height: calc(52 / 35);
+  @include mq(md) {
+    font-size: rem(70);
+    line-height: calc(104 / 70);
+  }
+}
+
+.error-page__body {
+  margin-top: 40px;
+  padding-left: rem(10);
+  padding-right: rem(20);
+  @include mq(md) {
+    position: absolute;
+    top: 48.6666%;
+    left: 50.3472%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.error-page__text {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(32 / 14);
+  display: flex;
+  justify-content: center;
+  max-width: rem(600);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(38 / 16);
+    color: $white;
+  }
+}
+
+.error-page__btn {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    text-align: left;
+    margin-top: rem(20);
+  }
+}
+
+.error-page__btn a {
+  display: inline-block;
+  color: $navy;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(17 / 14);
+  text-transform: uppercase;
+  border: 1px solid $navy;
+  border-radius: 4px;
+  padding: rem(12) rem(30);
+  @include mq(md) {
+    color: $white;
+    border-color: $white;
+  }
+}

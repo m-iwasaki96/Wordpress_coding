@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.img-gallery {
+  display: flex;
+  overflow: hidden;
+  padding: rem(80) 0;
+  background-color: $gray4;
+  @include mq(md) {
+    padding: rem(120) 0;
+  }
+}
+
+.img-gallary__items {
+  display: flex;
+  gap: rem(4);
+  animation: loop-img 20s linear infinite 0.5s both;
+  @include mq(md) {
+    gap: rem(10);
+  }
+  @keyframes loop-img {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.img-gallary__item {
+  width: calc((100vw - rem(15)) / 2);
+  @include mq(md) {
+    width: calc((100vw / 3));
+  }
+}
+
+.img-gallary__item:first-child {
+  margin-left: rem(4);
+  @include mq(md) {
+    margin-left: rem(10);
+  }
+}
+
+.img-gallary__item img {
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+  width: 100%;
+}

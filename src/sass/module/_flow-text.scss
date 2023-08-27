@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.flow-text {
+  width: 100%;
+  overflow: hidden;
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.flow-text__message {
+  color: $navy;
+  font-family: Noto Sans JP;
+  font-size: rem(84);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: calc(122 / 84);
+  white-space: nowrap;
+  animation: loopText 10s linear infinite;
+  @keyframes loopText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-250%);
+    }
+  }
+  @include mq(md) {
+    font-size: rem(150);
+    line-height: calc(217 / 150);
+    animation: loopText 20s linear infinite;
+    @keyframes loopText {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-120%);
+      }
+    }
+  }
+}

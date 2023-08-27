@@ -1,0 +1,155 @@
+@use "global" as *;
+
+.contact__wrapper {
+  @include mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.contact__contents {
+  padding: rem(80) rem(76);
+  background-color: $navy;
+  text-align: center;
+  @include mq(md) {
+    width: 43.1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 12.15%;
+    padding-right: 0;
+    text-align: initial;
+  }
+}
+
+.contact__text {
+  color: $white;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(28 / 14);
+  @include mq(md) {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+  }
+}
+
+.contact__btn {
+  display: block;
+  margin-top: rem(32);
+  width: rem(227);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    width: rem(235);
+    margin-top: rem(25);
+    margin-left: initial;
+  }
+}
+.contact__btn + .contact__btn {
+  margin-top: rem(20);
+}
+
+.contact__btn a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: calc(23 / 16);
+  border: 1px solid $white;
+  border-radius: 4px;
+  padding: rem(20) 0;
+  transition: ease 0.2s;
+  @include mq(md) {
+    font-size: rem(22);
+    line-height: calc(32 / 22);
+  }
+}
+
+.contact__btn span {
+  position: relative;
+  z-index: 3;
+  color: $white;
+}
+
+.contact__btn:hover span {
+  color: $navy;
+}
+
+.contact__btn a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $white;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+.contact__btn a:hover:before {
+  transform-origin:left top;
+	transform:scale(1, 1);
+}
+
+.contact__emailIcon,
+.contact__telIcon {
+  font-size: rem(16);
+  margin-right: rem(10);
+  @include mq(md) {
+    font-size: rem(22);
+    margin-right: rem(16);
+  }
+}
+
+.contact__reception {
+  color: $white;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: calc(17 / 12);
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(22);
+    font-size: rem(14);
+  }
+}
+
+.contact__img {
+  position: relative;
+  @include mq(md) {
+    width: 56.9%;
+  }
+}
+
+.contact__img::before {
+  content: "";
+  display: block;
+  padding-top: 64%;
+  @include mq(md) {
+    padding-top: 54.39%;
+  }
+}
+
+.contact__img picture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact__img img {
+  object-fit: cover;
+  height: 100%;
+}

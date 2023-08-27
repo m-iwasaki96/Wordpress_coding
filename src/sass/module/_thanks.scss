@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.thanks__inner.inner {
+  @include mq(md) {
+    max-width: 690px;
+    width: 100%;
+  }
+}
+
+.thanks__heading {
+  margin-top: rem(70);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.thannks__mesasge-en {
+  color: $black;
+  font-family: $second-font-family;
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: calc(36 / 24);
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: calc(59 / 40);
+  }
+}
+
+.thannks__mesasge-ja {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(20 / 14);
+  margin-top: rem(10);
+  @include mq(md) {
+    font-size: rem(18);
+    line-height: calc(26 / 18);
+    margin-top: rem(20);
+  }
+}
+
+.thanks__body {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(32 / 14);
+  margin-top: rem(30);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(38 / 16);
+    margin-top: rem(40);
+  }
+}
+
+.thanks__btn {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.thanks__btn a {
+  display: inline-block;
+  color: $white;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(20 / 14);
+  text-transform: uppercase;
+  border: 1px solid $navy;
+  border-radius: 4px;
+  padding: rem(12) rem(100);
+  background-color: $navy;
+  @include mq(md) {
+    padding: rem(20) rem(185);
+  }
+}

@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.news {
+  padding-bottom: rem(72);
+}
+
+.news__header {
+  padding-bottom: rem(35);
+  @include mq(md) {
+    padding-bottom: rem(40);
+  }
+}
+
+.news__title {
+  @include mq(md) {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+.news__link {
+  text-align: right;
+  margin-top: rem(45);
+}
+
+.news__link a {
+  position: relative;
+  display: inline-block;
+  color: $navy2;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(16 / 14);
+  padding-right: rem(20);
+  text-transform: uppercase;
+  transition: margin-left .3s;
+}
+
+.news__link a::after {
+  position: absolute;
+  top: 4px;
+  display: inline-block;
+  content: "";
+  transform: rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-top: 2px solid $navy2;
+  border-right: 2px solid $navy2;
+  transition: margin-left .3s;
+}
+
+.news__link a:hover:after {
+  margin-left: 15px;
+}
+
+.news__link a::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $navy2;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.news__link a:hover:before {
+  transform: scale(1, 1);
+}

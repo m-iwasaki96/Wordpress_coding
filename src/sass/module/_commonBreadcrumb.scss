@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.commonBreadcrumb {
+  padding-top: rem(10);
+  padding-right: rem(10);
+  padding-left: rem(10);
+  text-align: right;
+  @include mq(md) {
+    padding-top: rem(20);
+    padding-right: rem(60);
+    padding-left: rem(60);
+  }
+}
+
+.commonBreadcrumb__body {
+  color: $black2;
+  font-family: $base-font-family;
+  font-size: rem(10);
+  font-weight: $normal;
+  line-height: calc(12 / 10);
+  @include mq(md) {
+    font-size: rem(15);
+    line-height: calc(18 / 15);
+  }
+}
