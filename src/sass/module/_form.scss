@@ -1,0 +1,151 @@
+@use "global" as *;
+
+.form__inner.inner {
+  @include mq(md) {
+    max-width: 640px;
+  }
+}
+
+.form__field + .form__field {
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.form__label {
+  @include mq(md) {
+    display: flex;
+    gap: rem(16);
+  }
+}
+
+.form__label label {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(15);
+  font-weight: $medium;
+  line-height: calc(22 / 15);
+}
+
+.form__required {
+  color: $red;
+}
+
+.form__text {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(15);
+  font-weight: $normal;
+  line-height: calc(22 / 15);
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.form__data,
+.form__data-select {
+  width: 100%;
+  margin-top: rem(10);
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(20 / 14);
+  padding: rem(15);
+  border: 1px solid $gray2;
+  border-radius: 4px;
+}
+
+.form-input::placeholder {
+  color: $gray2;
+}
+
+.form__data-select {
+  position: relative;
+}
+
+.form__data-select::after {
+  position: absolute;
+  top: 42%;
+  right: 15px;
+  width: 0;
+  height: 0;
+  content: "";
+  border: 8px solid;
+  border-color: $black transparent transparent transparent;
+}
+
+.wpcf7-list-item-label {
+  position: relative;
+  display: inline-block;
+  padding-left: rem(24);
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(20 / 14);
+}
+.wpcf7-list-item-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "";
+  border: 1px solid $gray2;
+  border-radius: 3px;
+}
+
+.wpcf7-list-item-label::after {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 10px;
+  height: 5px;
+  content: "";
+  transform: rotate(-45deg);
+  opacity: 0;
+  border-bottom: 2px solid $black;
+  border-left: 2px solid $black;
+}
+
+.form__checkbox:checked + .wpcf7-list-item-label::after {
+  opacity: 1;
+}
+
+.form__textarea {
+  height: 160px;
+}
+
+.form__submit-button {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.form__submit-input {
+  display: inline-block;
+  color: $white;
+  background-color: $navy;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(20 / 14);
+  padding: rem(12) rem(95);
+  border-radius: 4px;
+  @include mq(md) {
+    font-size: rem(18);
+    line-height: calc(26 / 18);
+    padding: rem(20) rem(178);
+  }
+}

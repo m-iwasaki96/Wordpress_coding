@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.contactPage-form {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}

@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.worksDetailLayout {
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-bottom: rem(120);
+  }
+}

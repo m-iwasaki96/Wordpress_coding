@@ -111,7 +111,7 @@
     </header>
 
     <main>
-      <div class="lower-mv servicePage-mv">
+      <div class="lower-mv lowerLayout">
         <div class="lower-mv__inner">
           <div class="lower-mv__img">
             <picture>
@@ -129,11 +129,37 @@
 
       <div class="breadcrumb">パンくずリスト</div>
 
-      <div class="contactForm">
-        <div class="contactForm__inner inner">
-          <p class="contactForm__text">
-            入力内容をご確認ください。
-          </p>
+      <div class="contactConfirm">
+        <div class="contactConfirm__inner inner">
+          <p class="contactConfirm__text">入力内容をご確認ください。</p>
+          <div class="contactConfirm__contents contactConfirm">
+            <dl class="contactConfirm__list">
+              <div class="contactConfirm__item">
+                <dt class="contactConfirm__term">お名前<span class="contactConfirm__required">*</span></dt>
+                <dd class="contactConfirm__definition">田中太郎</dd>
+              </div>
+              <div class="contactConfirm__item">
+                <dt class="contactConfirm__term">電話番号</dt>
+                <dd class="contactConfirm__definition">000-0000-0000</dd>
+              </div>
+              <div class="contactConfirm__item">
+                <dt class="contactConfirm__term">メールアドレス<span class="contactConfirm__required">*</span></dt>
+                <dd class="contactConfirm__definition">hoge@hogehoge.com</dd>
+              </div>
+              <div class="contactConfirm__item">
+                <dt class="contactConfirm__term">お問い合わせの種類<span class="contactConfirm__required">*</span><br></dt>
+                <dd class="contactConfirm__definition">種類1</dd>
+              </div>
+              <div class="contactConfirm__item">
+                <dt class="contactConfirm__term">お問い合わせの内容<span class="contactConfirm__required">*</span></dt>
+                <dd class="contactConfirm__definition">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+              </div>
+            </dl>
+            <div class="contactConfirm__buttons">
+              <button class="contactConfirm__back-button">戻る</button>
+              <input class="contactConfirm__submit-input" type="submit" value="送信する">
+            </div>
+          </div>
         </div>
       </div>
 

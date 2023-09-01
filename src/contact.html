@@ -114,7 +114,7 @@
     </header>
 
     <main>
-      <div class="lower-mv servicePage-mv">
+      <div class="lower-mv lowerLayout">
         <div class="lower-mv__inner">
           <div class="lower-mv__img">
             <picture>
@@ -137,6 +137,67 @@
           <p class="contactForm__text">
             弊社へのお問い合わせは<br>下記フォームより受け付けております。<br>担当者が確認後、折り返しご連絡させていただきます。
           </p>
+        </div>
+      </div>
+
+      <div class="form contactPage-form">
+        <div class="form__inner inner">
+          <dl class="form__list">
+            <div class="form__field">
+              <dt class="form__label">
+                <label for="name">会社名<span class="form__required">*</span></label>
+                <p class="form__text">個人の場合は「個人」と入力してください</p>
+              </dt>
+              <dd class="form__data"><input type="text" id="your-name" name="your-name" class="form__input" placeholder="例）株式会社ABC" required></dd>
+            </div>
+            <div class="form__field">
+              <dt class="form__label">
+                <label for="name">ご担当者名<span class="form__required">*</span></label>
+                <p class="form__text">個人の場合は氏名を入力してください</p>
+              </dt>
+              <dd class="form__data"><input type="text" id="your-name" name="your-name" class="form__input" placeholder="例）輸入車　太郎" required></dd>
+            </div>
+            <div class="form__field">
+              <dt class="form__label"><label for="phone">電話番号</label></dt>
+              <dd class="form__data"><input type="tel" id="phone" name="phone" class="form__input" placeholder="例）000-0000-0000"></dd>
+            </div>
+            <div class="form__field">
+              <dt class="form__label"><label for="email">メールアドレス<span class="form__required">*</span></label></dt>
+              <dd class="form__data"><input type="email" id="your-email" name="your-email" class="form__input" placeholder="例）abcdefghijk@excitecode.co.jp" required></dd>
+            </div>
+            <div class="form__field">
+              <dt class="form__label">お問い合わせの種類<span class="form__required">*</span>（ドロップダウンメニュー式）</dt>
+              <dd class="form__data-select">
+                <select id="category" name="category" class="form__select" required>
+                  <option value="">選択してください</option>
+                  <option value="type1">種類1</option>
+                  <option value="type2">種類2</option>
+                  <option value="type3">種類3</option>
+                </select>
+              </dd>
+            </div>
+            <div class="form__field">
+              <dt class="form__label"><label for="message">お問い合わせの内容<span class="form__required">*</span></label></dt>
+              <dd class="form__data"><textarea id="message" name="message" class="form__textarea" required></textarea></dd>
+            </div>
+            <div class="form__field">
+              <div class="form__data">
+                <span class="wpcf7-form-control-wrap" data-name="privacy">
+                  <span class="wpcf7-form-control wpcf7-acceptance">
+                    <span class="wpcf7-list-item">
+                      <label>
+                        <input type="checkbox" name="privacy" class="form__checkbox" id="privacy">
+                        <span class="wpcf7-list-item-label">「個人情報の取り扱いについて」同意する<span class="form__required">*</span></span>
+                      </label>
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </dl>
+          <div class="form__submit-button">
+            <input class="form__submit-input" type="submit" value="確認画面へ">
+          </div>
         </div>
       </div>
 

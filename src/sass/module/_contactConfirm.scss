@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.contactConfirm__inner.inner {
+  @include mq(md) {
+    max-width: rem(730);
+  }
+}
+
+.contactConfirm__text {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(32 / 14);
+  margin-top: rem(30);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(38 / 16);
+    margin-top: rem(60);
+  }
+}
+
+.contactConfirm__list {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}
+
+.contactConfirm__item {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.contactConfirm__item + .contactConfirm__item {
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.contactConfirm__term {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(15);
+  font-weight: $medium;
+  line-height: calc(22 / 15);
+  @include mq(md) {
+    width: 28.2352%;
+  }
+}
+
+.contactConfirm__required {
+  color: $red;
+}
+
+.contactConfirm__definition {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(20 / 14);
+  margin-top: rem(10);
+  @include mq(md) {
+    width: 71.7647%;
+    margin-top: 0;
+  }
+}
+
+.contactConfirm__buttons {
+  display: flex;
+  justify-content: center;
+  gap: rem(23);
+  margin-top: rem(40);
+  @include mq(md) {
+    justify-content: initial;
+    gap: 0;
+  }
+}
+
+.contactConfirm__back-button,
+.contactConfirm__submit-input {
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(26 / 18);
+  border: 1px solid $navy;
+  border-radius: 4px;
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+.contactConfirm__back-button {
+  color: $navy;
+  padding: rem(12) rem(62);
+  @include mq(md) {
+    padding: rem(20) rem(120);
+  }
+}
+
+.contactConfirm__submit-input {
+  color: $white;
+  background-color: $navy;
+  padding: rem(12) rem(48);
+  @include mq(md) {
+    padding: rem(20) rem(104);
+    margin-left: rem(80);
+  }
+}
