@@ -73,7 +73,7 @@
 .about__link a {
   position: relative;
   display: inline-block;
-  color: $navy2;
+  color: $deepGreen;
   font-family: $base-font-family;
   font-size: rem(14);
   font-weight: $medium;
@@ -92,8 +92,8 @@
   width: 7px;
   height: 7px;
   margin-left: 10px;
-  border-top: 2px solid $navy2;
-  border-right: 2px solid $navy2;
+  border-top: 2px solid $deepGreen;
+  border-right: 2px solid $deepGreen;
   transition: margin-left .3s;
 }
 
@@ -108,7 +108,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: $navy2;
+  background-color: $deepGreen;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: transform .3s;

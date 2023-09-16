@@ -18,7 +18,7 @@
 
 .lower-message__link-item a {
   position: relative;
-  color: $navy;
+  color: $deepGreen;
   font-family: $base-font-family;
   font-size: rem(12);
   font-weight: $normal;
@@ -31,15 +31,18 @@
 
 .lower-message__link-item a::after {
   position: absolute;
-  top: 5px;
+  top: 0;
   display: inline-block;
   content: "";
   transform: rotate(135deg);
   width: 7px;
   height: 7px;
   margin-left: 10px;
-  border-top: 2px solid $navy2;
-  border-right: 2px solid $navy2;
+  border-top: 2px solid $deepGreen;
+  border-right: 2px solid $deepGreen;
+  @include mq(md) {
+    top: 5px;
+  }
 }
 
 .lower-message__main-message {

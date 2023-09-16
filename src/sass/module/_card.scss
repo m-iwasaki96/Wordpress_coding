@@ -34,6 +34,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  text-shadow: 1px 1px 1px $gray;
 }
 
 .card__title-en {
@@ -82,13 +83,13 @@
 .card__btn a {
   position: relative;
   display: inline-block;
-  color: $navy;
+  color: $deepGreen;
   font-family: $base-font-family;
   font-size: rem(14);
   font-weight: $medium;
   line-height: 1;
   text-transform: uppercase;
-  border: 1px solid $navy;
+  border: 1px solid $deepGreen;
   border-radius: 4px;
   padding: rem(12) rem(34) rem(12) rem(24);
   @include mq(md) {
@@ -105,8 +106,8 @@
   width: 7px;
   height: 7px;
   margin-left: 10px;
-  border-top: 2px solid $navy2;
-  border-right: 2px solid $navy2;
+  border-top: 2px solid $deepGreen;
+  border-right: 2px solid $deepGreen;
   transition: margin-left .3s;
 }
 

@@ -50,7 +50,7 @@
 }
 
 .list__category-item.is-active {
-  color: $navy2;
+  color: $deepGreen;
 }
 
 .list__category-item::before {
@@ -65,7 +65,7 @@
 }
 
 .list__category-item.is-active::before {
-  background-color: $navy2;
+  background-color: $deepGreen;
 }
 
 .list__menu-items {
@@ -154,7 +154,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: $navy2;
+  background-color: $deepGreen;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: transform .3s;

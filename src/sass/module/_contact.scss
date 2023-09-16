@@ -9,7 +9,7 @@
 
 .contact__contents {
   padding: rem(80) rem(76);
-  background-color: $navy;
+  background-color: $green;
   text-align: center;
   @include mq(md) {
     width: 43.1%;
@@ -78,7 +78,7 @@
 }
 
 .contact__btn:hover span {
-  color: $navy;
+  color: $deepGreen;
 }
 
 .contact__btn a::before {
