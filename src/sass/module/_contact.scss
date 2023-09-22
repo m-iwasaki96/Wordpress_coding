@@ -8,17 +8,14 @@
 }
 
 .contact__contents {
-  padding: rem(80) rem(76);
+  padding: rem(80) 0;
   background-color: $green;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include mq(md) {
     width: 43.1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 12.15%;
-    padding-right: 0;
-    text-align: initial;
   }
 }
 
@@ -43,7 +40,6 @@
   @include mq(md) {
     width: rem(235);
     margin-top: rem(25);
-    margin-left: initial;
   }
 }
 .contact__btn + .contact__btn {

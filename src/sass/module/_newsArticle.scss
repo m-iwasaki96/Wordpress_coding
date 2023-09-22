@@ -93,7 +93,6 @@
 .newsArticle__main-img img {
   aspect-ratio: 315 / 176;
   object-fit: cover;
-  // WordPress表示崩れ用
   width: auto;
   height: auto;
   @include mq(md) {
@@ -157,9 +156,9 @@
 }
 
 .newsArticle__detail-content li {
-  color: #000;
+  color: $black;
   font-family: Noto Sans JP;
-  font-size: 14px;
+  font-size: rem(14);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -182,12 +181,12 @@
 .newsArticle__btn a {
   position: relative;
   display: inline-block;
-  color: $navy;
+  color: $deepGreen;
   font-family: $base-font-family;
   font-size: rem(14);
   font-weight: $medium;
   line-height: 1;
-  border: 1px solid $navy;
+  border: 1px solid $deepGreen;
   border-radius: 4px;
   @include mq(md) {
   }
@@ -216,8 +215,8 @@
   transform: rotate(-135deg);
   width: 7px;
   height: 7px;
-  border-top: 2px solid $navy2;
-  border-right: 2px solid $navy2;
+  border-top: 2px solid $deepGreen;
+  border-right: 2px solid $deepGreen;
   @include mq(md) {
     top: 17px;
   }
@@ -232,8 +231,8 @@
   width: 7px;
   height: 7px;
   margin-left: 10px;
-  border-top: 2px solid $navy2;
-  border-right: 2px solid $navy2;
+  border-top: 2px solid $deepGreen;
+  border-right: 2px solid $deepGreen;
 }
 
 .newsArticle__sidebar {

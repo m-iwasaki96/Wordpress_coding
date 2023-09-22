@@ -2,7 +2,9 @@
 
 .worksPage-body {
   margin-top: rem(30);
+  margin-bottom: rem(80);
   @include mq(md) {
     margin-top: rem(60);
+    margin-bottom: rem(120);
   }
 }

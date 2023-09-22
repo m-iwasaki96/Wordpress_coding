@@ -2,6 +2,7 @@
 
 .lowerArticle-head {
   margin-top: rem(90);
+  margin-inline: auto;
   @include mq(md) {
     margin-top: rem(200);
   }

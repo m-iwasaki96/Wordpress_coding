@@ -5,6 +5,7 @@
   padding-right: rem(10);
   padding-left: rem(10);
   text-align: right;
+  margin-inline: auto;
   @include mq(md) {
     padding-top: rem(20);
     padding-right: rem(60);

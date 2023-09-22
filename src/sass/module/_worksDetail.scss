@@ -81,7 +81,42 @@
   }
 }
 
-.worksDetail__text {
+.worksDetail__content h2 {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(23 / 16);
+  background-color: $gray4;
+  border-left: 3px solid $deepGreen;
+  padding-top: rem(8);
+  padding-left: rem(11);
+  padding-bottom: rem(8);
+  margin-top: rem(40);
+  @include mq(md) {
+    font-size: rem(22);
+    line-height: calc(32 / 22);
+    padding-left: rem(14);
+  }
+}
+
+.worksDetail__content h3 {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(18);
+  font-weight: $medium;
+  line-height: calc(26 / 18);
+  padding-bottom: rem(8);
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg, $deepGreen 0%, $deepGreen 39.6825%, $gray6 39.6825%, $gray6 100%);
+  border-image-slice: 1;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(72);
+  }
+}
+
+.worksDetail__content p {
   color: $black;
   font-family: $base-font-family;
   font-size: rem(14);
@@ -97,10 +132,28 @@
   }
 }
 
-.worksDetail__text + .worksDetail__text {
+.worksDetail__content p + .worksDetail__content p {
   @include mq(md) {
     margin-top: 0;
   }
+}
+
+.worksDetail__content ul {
+  margin-top: rem(22);
+  @include mq(md) {
+    margin-top: rem(72);
+  }
+}
+
+.worksDetail__content li {
+  color: $black;
+  font-family: Noto Sans JP;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
 .worksDetail__btn {
@@ -114,13 +167,13 @@
 .worksDetail__btn a {
   position: relative;
   display: inline-block;
-  color: $navy2;
+  color: $deepGreen;
   font-family: $base-font-family;
   font-size: rem(14);
   font-weight: $medium;
   line-height: calc(20 / 14);
   text-transform: uppercase;
-  border: 1px solid $navy2;
+  border: 1px solid $deepGreen;
   border-radius: 4px;
   padding: rem(12) rem(86) rem(12) rem(100);
 }
@@ -134,6 +187,6 @@
   transform: rotate(-135deg);
   width: 7px;
   height: 7px;
-  border-top: 2px solid $navy2;
-  border-right: 2px solid $navy2;
+  border-top: 2px solid $deepGreen;
+  border-right: 2px solid $deepGreen;
 }
