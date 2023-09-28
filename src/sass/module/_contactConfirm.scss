@@ -86,7 +86,7 @@
   font-size: rem(14);
   font-weight: $medium;
   line-height: calc(26 / 18);
-  border: 1px solid $navy;
+  border: 1px solid $deepGreen;
   border-radius: 4px;
   @include mq(md) {
     font-size: rem(18);
@@ -94,7 +94,7 @@
 }
 
 .contactConfirm__back-button {
-  color: $navy;
+  color: $deepGreen;
   padding: rem(12) rem(62);
   @include mq(md) {
     padding: rem(20) rem(120);
@@ -103,7 +103,7 @@
 
 .contactConfirm__submit-input {
   color: $white;
-  background-color: $navy;
+  background-color: $deepGreen;
   padding: rem(12) rem(48);
   @include mq(md) {
     padding: rem(20) rem(104);

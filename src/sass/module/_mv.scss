@@ -24,7 +24,8 @@
 }
 
 .mv__js-swiper {
-  height: 80.2675%;
+  // height: 80.2675%;
+  height: calc(100vh - rem(120));
   @include mq(md) {
     width: 80.7812%;
     height: 100vh;
@@ -32,17 +33,14 @@
 }
 
 .mv__swiper-wrapper {
-  height: 100%;
-  @include mq(md) {
-    height: 100vh;
-  }
+  height: inherit;
 }
 
 .mv__img {
   display: block;
-  height: 100%;
+  height: inherit;
   @include mq(md) {
-    height: initial;
+    height: inherit;
   }
 }
 
