@@ -33,6 +33,24 @@
   object-fit: cover;
 }
 
+// about-imgアニメーション
+.js-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.js-image-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: $deepGreen;
+  z-index: 1;
+}
+
 .about__contents {
   padding-top: rem(30);
   @include mq(md) {
@@ -94,7 +112,7 @@
   margin-left: 10px;
   border-top: 2px solid $deepGreen;
   border-right: 2px solid $deepGreen;
-  transition: margin-left .3s;
+  transition: margin-left 0.3s;
 }
 
 .about__link a:hover::after {
@@ -111,7 +129,7 @@
   background-color: $deepGreen;
   transform: scale(0, 1);
   transform-origin: left top;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .about__link a:hover:before {
