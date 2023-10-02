@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .philosophy__inner.inner {
-  background-color: linear-gradient(180deg, $gray4 0%, $gray4 89.6805%, transparent 89.6805%, transparent 100%);
+  background-color: $gray4;
   @include mq(md) {
     background-color: transparent;
   }
