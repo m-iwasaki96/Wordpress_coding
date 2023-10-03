@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+}
+
+.loader__line {
+  width: calc((100% / 3) + 1px);
+  margin-left: rem(-1);
+  height: 100%;
+  background: $deepGreen;
+}
+
+.loader__line:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader__line img {
+  aspect-ratio: 258 / 180;
+  object-fit: cover;
+}

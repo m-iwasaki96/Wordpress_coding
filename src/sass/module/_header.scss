@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  z-index: 9999;
+  z-index: 8000;
   top: 0;
   left: 0;
   width: 100%;
@@ -79,7 +79,7 @@
   position: fixed;
   width: rem(25);
   height: rem(14);
-  z-index: 9999;
+  z-index: 8000;
   top: rem(33);
   right: rem(30);
   cursor: pointer;

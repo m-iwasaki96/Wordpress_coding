@@ -1,3 +1,27 @@
+// ローディングアニメーション
+if(document.querySelector('.loader') !== null) {
+  let op = gsap.timeline();
+    op.fromTo (
+      ".loader__line",
+      {
+        yPercent:0,
+      },
+      {
+        yPercent:-100,
+        duration:1,
+        stagger:{
+          each:0.2,
+          ease:Power4.easeInOut,
+        }
+      },"+=1"
+    )
+    .to (
+      ".loader",
+      {
+        display:"none",
+      },">"
+    );
+}
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
   // ハンバーガーメニュー
