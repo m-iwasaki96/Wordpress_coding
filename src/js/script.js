@@ -114,6 +114,7 @@ mm.add('(min-width:769px)', function () {
           skewX:10,
           scale:1.2,
           xPercent:-120,
+          delay:0.3,
           duration:1,
           ease:Power3.easeOut,
           scrollTrigger:{

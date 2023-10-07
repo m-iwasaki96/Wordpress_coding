@@ -48,7 +48,10 @@
   width: 100%;
   height: 100%;
   background: $deepGreen;
-  z-index: 1;
+  z-index: -1;
+  @include mq(md) {
+    z-index: 1;
+  }
 }
 
 .about__contents {
