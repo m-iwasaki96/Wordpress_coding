@@ -159,7 +159,7 @@ mm.add('(min-width:769px)', function () {
         trigger:'.list__categories',
         start:'top 75%',
     }});
-  
+
     gsap.fromTo('.list__menu-item',
       {opacity:0, y:20},
       {opacity:1, y:0, duration:.3, stagger:.3, scrollTrigger:{
@@ -173,9 +173,30 @@ mm.add('(min-width:769px)', function () {
     gsap.fromTo('.lower-mv__title',
       {opacity:0, x:-30},
       {opacity:1, x:0, duration:1, delay:.5});
-  
+
     gsap.fromTo('.lower-mv__img',
       {opacity:0, x:30},
       {opacity:1, x:0, duration:2});
+  }
+
+  if(document.querySelector('.js-maskImg') !== null) {
+    let maskImgs=document.querySelectorAll('.js-maskImg');
+    maskImgs.forEach ((maskImg)=>{
+      gsap.fromTo (
+        maskImg,
+        {
+        },
+        {
+          scrollTrigger:{
+            trigger:maskImg,
+            start:"top bottom",
+            once:true,
+            toggleClass:{
+              targets:maskImg,
+              className:"is-open"
+            }
+          }
+        }
+    )});
   }
 });

@@ -165,3 +165,31 @@
     margin-top: rem(20);
   }
 }
+
+/* ===============================================
+画像アニメーション制御用
+=============================================== */
+
+@keyframes maskImg {
+  0%{
+  mask-position: 200% 0%;
+  }
+  100%{
+  mask-position: 0% 0%;
+
+  }
+}
+
+.js-maskImg {
+  mask-image: linear-gradient(90deg,$black 0% 50% , transparent 100% );
+  mask-size: 200% 100%;
+  mask-repeat: no-repeat;
+  mask-position: 0% 0%;
+  @include mq(md) {
+    mask-position: 200% 0%;
+  }
+}
+
+.js-maskImg.is-open{
+animation:  maskImg 1s linear forwards;
+}
