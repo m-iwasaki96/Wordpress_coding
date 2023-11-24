@@ -164,19 +164,6 @@
   opacity: 1;
 }
 
-// .header__drawer-items {
-//   // ドロワーアニメーション用
-//   animation: drawerAnime 1s forwards;
-//   @keyframes drawerAnime {
-//     0% {
-//       opacity: 0;
-//     }
-//     100% {
-//       opacity: 1;
-//     }
-//   }
-// }
-
 .header__drawer-item a {
   display: block;
   color: $white;
@@ -191,16 +178,6 @@
 .header__drawer-icons {
   color: $white;
   margin-top: rem(50);
-  // // ドロワーアニメーション用
-  // animation: drawerAnime 1s forwards;
-  // @keyframes drawerAnime {
-  //   0% {
-  //     opacity: 0;
-  //   }
-  //   100% {
-  //     opacity: 1;
-  //   }
-  // }
 }
 .header__social-icon {
   font-size: rem(22);
